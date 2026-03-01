@@ -10,16 +10,54 @@
     gtag('js', new Date());
     gtag('config', 'UA-131559193-1');
   </script>
+
   <title>anand_resume_02_2026</title>
   <meta http-equiv="content-type" content="text/html;charset=utf-8">
+
   <style type="text/css">
     body {
       font-family: monospace;
       font-size: 12px;
       color: #FFFFFF;
-      margin: 20px 10px 0px 20px;
+      margin: 0;
       text-align: left;
       background: #000000;
+    }
+
+    /* New layout */
+    .layout {
+      display: flex;
+      gap: 24px;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 20px 10px 0px 20px;
+      box-sizing: border-box;
+    }
+
+    .main {
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+
+    .sidebar {
+      flex: 0 0 320px;
+    }
+
+    @media (max-width: 980px) {
+      .layout {
+        flex-direction: column;
+        padding-right: 20px;
+      }
+
+      .sidebar {
+        flex: 0 0 auto;
+        width: 100%;
+      }
+    }
+
+    .sidebar-inner {
+      position: sticky;
+      top: 12px;
     }
 
     .manheader {
@@ -73,15 +111,15 @@
       color: #CCCCCC;
     }
 
+    /* Sidebar card (replaces absolute linkfloater) */
     .linkfloater {
-      position: absolute;
-      top: 5px;
-      right: 5px;
-      padding: 5px;
+      padding: 10px 12px;
       text-align: right;
       background-color: #000000;
       color: #FFFFFF;
       box-shadow: 0 0 2px #000000;
+      border: 1px solid #111;
+      border-radius: 6px;
     }
 
     .linkfloater a:link,
@@ -92,48 +130,55 @@
     }
 
     .LI-profile-badge {
-      position: absolute;
-      top: 130px;
-      right: 5px;
-      padding: 5px;
+      margin-top: 14px;
       text-align: right;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid #222;
+      margin: 8px 0;
     }
   </style>
 </head>
 
 <body>
-  <div class="linkfloater">
-    <span>Anand's Links</span>
-    <hr>
-    Why does<br>this resume<br>look like a man page?<br>
-    It's a <a href="http://en.wikipedia.org/wiki/Man_page" rel="noopener noreferrer" target="_blank">man page</a>!
-  </div>
-  <pre class="manheader">anand_resume_02_2026                         Resume                            anand_resume_02_2026
-</pre>
-  <h1>NAME</h1>
-  <p class="subtext">
-    Anand Swaroop - Senior Platform Engineer
-  </p>
-  <h1>SYNOPSIS</h1>
-  <p class="subtext">
-    Anand [--platform engineer] [--infrastructure] [--observability] [--automation]
-  </p>
-  <h1>SUMMARY</h1>
-  <p class="subtext">
-    Senior Platform Engineer specializing in infrastructure, automation, and observability. I see systems from angles
-    that are not immediately obvious, patterns tend to confess if you observe closely. I believe no system deserves
-    privacy; if it runs, it should be ready to explain itself. I enjoy dashboards, cloud and observability and I love
-    documenting things so humans suffer less. I am a people person who enjoys sharing knowledge, connecting signals and
-    making complex systems behave predictably.
-  </p>
+  <div class="layout">
 
-  <h1>EXPERIENCE</h1>
-  <p class="subtext">
-    Senior Engineer, CrowdStrike — Apr 2022 -- Present (Australia, Remote)
-  </p>
-  <p class="doublesubtext">
-    * Automated LogScale cluster provisioning using Ansible to replace a manual ~24-hour process, reducing provisioning
-    time from ~24h to <5 minutes and enabling on-demand creation for customer clusters. </p>
+    <!-- MAIN CONTENT -->
+    <div class="main">
+
+      <pre class="manheader">anand_resume_02_2026                         Resume                            anand_resume_02_2026
+</pre>
+
+      <h1>NAME</h1>
+      <p class="subtext">
+        Anand Swaroop - Senior Platform Engineer
+      </p>
+
+      <h1>SYNOPSIS</h1>
+      <p class="subtext">
+        Anand [platform engineer] [infrastructure] [observability] [automation]
+      </p>
+
+      <h1>SUMMARY</h1>
+      <p class="subtext">
+        Senior Platform Engineer specializing in infrastructure, automation, and observability. I see systems from angles
+        that are not immediately obvious, patterns tend to confess if you observe closely. I believe no system deserves
+        privacy; if it runs, it should be ready to explain itself. I enjoy dashboards, cloud and observability and I love
+        documenting things so humans suffer less. I am a people person who enjoys sharing knowledge, connecting signals and
+        making complex systems behave predictably.
+      </p>
+
+      <h1>EXPERIENCE</h1>
+
+      <p class="subtext">
+        Senior Engineer, CrowdStrike, Apr 2022 to Present (Australia, Remote)
+      </p>
+      <p class="doublesubtext">
+        * Automated LogScale cluster provisioning using Ansible to replace a manual ~24-hour process, reducing provisioning
+        time from ~24h to less than 5 minutes and enabling on-demand creation for customer clusters.
+      </p>
       <p class="doublesubtext">
         * Automated EC2 provisioning and EBS volume resizing using Terraform, Lambda, Step Functions, and SSM workflows,
         eliminating manual intervention required during disk-related paging incidents.
@@ -163,9 +208,8 @@
         improving team effectiveness and platform reliability.
       </p>
 
-
       <p class="subtext">
-        DevOps Engineer, Deferit — May 2021 -- Apr 2022 (Sydney, Australia)
+        DevOps Engineer, Deferit, May 2021 to Apr 2022 (Sydney, Australia)
       </p>
       <p class="doublesubtext">
         * Improved CI/CD pipeline efficiency reducing deployment time by approximately 15 minutes.
@@ -184,7 +228,7 @@
       </p>
 
       <p class="subtext">
-        DevOps Engineer, Uno Home Loans — Jan 2021 -- May 2021 (Sydney, Australia)
+        DevOps Engineer, Uno Home Loans, Jan 2021 to May 2021 (Sydney, Australia)
       </p>
       <p class="doublesubtext">
         * Reduced AWS infrastructure costs by 30% through scaling optimization and rightsizing.
@@ -200,7 +244,7 @@
       </p>
 
       <p class="subtext">
-        Cloud Infrastructure Developer, HAMBS — May 2019 -- Dec 2020 (Adelaide, Australia)
+        Cloud Infrastructure Developer, HAMBS, May 2019 to Dec 2020 (Adelaide, Australia)
       </p>
       <p class="doublesubtext">
         * Reduced deployment time from days to hours by building automated CI/CD pipelines.
@@ -216,7 +260,7 @@
       </p>
 
       <p class="subtext">
-        Associate Lead (Web Admin), ATMECS — Mar 2017 -- May 2019 (India)
+        Associate Lead (Web Admin), ATMECS, Mar 2017 to May 2019 (India)
       </p>
       <p class="doublesubtext">
         * Maintained uptime and deployment pipelines for multiple production web services.
@@ -236,9 +280,8 @@
         * Delivered AWS training sessions across engineering teams.
       </p>
 
-
       <p class="subtext">
-        Senior Specialist, HCL Technologies — Mar 2015 -- Mar 2017 (India)
+        Senior Specialist, HCL Technologies, Mar 2015 to Mar 2017 (India)
       </p>
       <p class="doublesubtext">
         * Managed enterprise system administration and deployment automation using SCCM.
@@ -248,7 +291,7 @@
       </p>
 
       <p class="subtext">
-        Senior Associate, Capgemini — Dec 2013 -- Dec 2014 (India)
+        Senior Associate, Capgemini, Dec 2013 to Dec 2014 (India)
       </p>
       <p class="doublesubtext">
         * Provided system administration, troubleshooting, and infrastructure support.
@@ -258,8 +301,9 @@
       </p>
 
       <h1>PROJECTS</h1>
+
       <p class="subtext">
-        Serverless VoiceBot — AWS Lex, Lambda, API Gateway, DynamoDB
+        Serverless VoiceBot, AWS Lex, Lambda, API Gateway, DynamoDB
       </p>
       <p class="doublesubtext">
         * Designed and deployed serverless chatbot using AWS serverless architecture.
@@ -269,7 +313,7 @@
       </p>
 
       <p class="subtext">
-        Cloud Native CRUD Application — Terraform, ECS Fargate, Cognito, DynamoDB
+        Cloud Native CRUD Application, Terraform, ECS Fargate, Cognito, DynamoDB
       </p>
       <p class="doublesubtext">
         * Built secure cloud-native application with authentication and automated infrastructure provisioning.
@@ -279,6 +323,7 @@
       </p>
 
       <h1>TECHNICAL SKILLS</h1>
+
       <p class="subtext">
         Cloud: AWS, Azure, GCP
       </p>
@@ -307,15 +352,17 @@
         Version Control: Git, GitHub, GitLab, Bitbucket
       </p>
 
-
       <h1>EDUCATION</h1>
       <p class="subtext">
-        Bachelor of Information Technology — Ajay Kumar Garg Engineering College (2007 -- 2011)
+        Bachelor of Information Technology
       </p>
 
       <h1>CERTIFICATIONS</h1>
       <p class="subtext">
         * AWS Certified Security Specialty
+      </p>
+      <p class="subtext">
+        * HashiCorp Certified - Terraform Associate
       </p>
       <p class="doublesubtext">
         * AWS SysOps Administrator Associate
@@ -327,19 +374,41 @@
         * CCNA Routing and Switching
       </p>
       <p class="doublesubtext">
-        * Site Reliability Engineering: Measuring and Managing Reliability - Google
+        * Site Reliability Engineering: Measuring and Managing Reliability, Google
       </p>
-
 
       <pre class="manheader">anand_resume_02_2026                         2026-02-16                                  anand_resume_02_2026
 </pre>
+
       <p class="footer">
         &copy; 2026 Anand Swaroop
       </p>
-      <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
-      <div class="LI-profile-badge" data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical"
-        data-theme="dark" data-vanity="ands"><a class="LI-simple-link"
-          href='https://in.linkedin.com/in/ands?trk=profile-badge'>Anand Swaroop</a></div>
+
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+
+        <div class="linkfloater">
+          <span>Anand's Links</span>
+          <hr>
+          Why does<br>this resume<br>look like a man page?<br>
+          It's a <a href="http://en.wikipedia.org/wiki/Man_page" rel="noopener noreferrer" target="_blank">man page</a>!
+        </div>
+
+        <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
+        <div class="LI-profile-badge" data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical"
+          data-theme="dark" data-vanity="ands">
+          <a class="LI-simple-link" href="https://in.linkedin.com/in/ands?trk=profile-badge" rel="noopener noreferrer"
+            target="_blank">Anand Swaroop</a>
+        </div>
+
+      </div>
+    </aside>
+
+  </div>
 </body>
 
 </html>
